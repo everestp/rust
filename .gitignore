@@ -1,0 +1,11 @@
+# Ignore everything by default
+*
+
+# But don't ignore directories, so Git can traverse them
+!*/
+
+# Except for the `.gitignore` file itself, which must also be versioned
+!.gitignore
+
+# Re-include all `.rs` files
+!*.rs
