@@ -1,7 +1,7 @@
 fn main() {
    
-    let ans1 = is_odd(1129);
-    println!(" is-odd {}",ans1);
+    
+    println!(" is-odd {}",is_odd(1));
 
 }
 
