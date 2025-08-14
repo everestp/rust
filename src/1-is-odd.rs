@@ -1,15 +1,16 @@
 fn main() {
-    let ans = is_even(1120);
-    println!("{}",ans);
+   
+    let ans1 = is_odd(1129);
+    println!(" is-odd {}",ans1);
+
 }
 
 //function to check the number is even or odd
 // i32 is signed which can give + -
-fn is_even(num:u32)-> bool{
-    if num %2 ==0 {
+ fn is_odd(num:i32)->bool {
+    if num % 2 ==0 {
+        return false;
+    }else {
         return true;
     }
-    else {
-        return false;
-    }
-}
+ }
