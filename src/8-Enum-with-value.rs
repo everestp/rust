@@ -22,7 +22,7 @@ fn main(){
     println!("The area of rectangle={}",calculate_area(rectangle));
     let  circle = Shape::Circle(5.0);
     println!("The area of circle is {}",calculate_area(circle));
-    let square = Shape:å:Square(7.0);
+    let square = Shape::Square(7.0);
     println!("The area of square is {}",calculate_area(square));
 }
     
