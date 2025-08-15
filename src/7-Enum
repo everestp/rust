@@ -1,0 +1,15 @@
+#[derive(Debug)]
+enum Shape{
+    Circle,
+    Rectangle,
+    SemiCircle
+}
+fn  main(){
+    println!("This is the area based on  the enum {}",get_area(Shape::Circle));
+}
+
+fn get_area(shape:Shape)->i32{
+println!("This is the the {:?} shape",shape);
+2
+}
+    
