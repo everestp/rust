@@ -1,4 +1,4 @@
-fn main(){
+fn main() {
     let mut vec = Vec::new();
     vec.push(1);
     vec.push(2);
@@ -6,27 +6,23 @@ fn main(){
     vec.push(4);
     vec.push(5);
     vec.push(6);
-    println!("{:?}",vec);
- let ans =  even_filter(&mut vec); // here i am passing the reference so  second function point to the reference can mutate the  vector
-     println!("Upafda the same vector{:?}",vec);
-     println!("Upafda the same vector{:?}",ans);
-    
-    
+    println!("{:?}", vec);
+
+    let ans = even_filter(&mut vec); // Passing a mutable reference so the function can modify the original vector
+    println!("Updated vector: {:?}", vec);
+    println!("Function result: {:?}", ans);
 }
 
-fn even_filter(vec: &mut Vec<i32>){
-  let mut i =0;
-     while  i < vec.len(){
-         if vec[i] % 2 != 0 {
-             vec.remove(i);
-         }
-         else{
-             i +=1;
-         }
-     }
-    
+fn even_filter(vec: &mut Vec<i32>) {
+    let mut i = 0;
+    while i < vec.len() {
+        if vec[i] % 2 != 0 {
+            vec.remove(i);
+        } else {
+            i += 1;
+        }
+    }
 }
-
 
  /*
     One of the simplest but most powerful lessons I’ve picked up in Rust 🦀
