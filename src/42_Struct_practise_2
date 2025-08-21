@@ -1,0 +1,41 @@
+
+
+struct Point<T ,U >{
+    x:T,
+    y:U
+}
+
+
+impl<T:std::fmt::Display, U: std::fmt::Display> Point<T,U>{
+    fn new1(x:T ,y:U)->Self{
+Self { x, y}
+    }
+    
+    fn mixup<X,Y>(self ,point:Point<X,Y>)->Point<T ,Y>{
+  Point { x: self.x, y:point.y }
+    }
+  fn print_fn(&self){
+    println!("Point->  x: {} y: {}", self.x, self.y);
+}
+
+   
+    
+}
+
+
+fn main(){
+
+      let a: i32 = 10;  // i32 is Copy
+    let b = a;         // Rust automatically copies the value
+    println!("a = {}, b = {}", a, b); // ✅ a is still valid
+    let point_a = Point {
+        x:2,
+        y:4.5
+    };
+      let point_b = Point::new1(3,1);
+       
+
+ let point_c=point_b.mixup(point_a);
+
+point_c.print_fn();
+}
